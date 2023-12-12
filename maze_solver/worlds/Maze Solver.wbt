@@ -10,8 +10,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.5816275981423717 0.5572173937717084 0.5926365776404628 2.108838540387813
-  position -1.8176752765217499 -0.28405455927217405 5.551582260295487
+  orientation -0.5798107296618816 0.5610634587922299 0.5907853357836974 2.10292141500853
+  position -2.7786415233072934 -0.21370836408884508 4.012525770762636
 }
 TexturedBackground {
 }
@@ -424,7 +424,7 @@ Solid {
     radius 0.06
   }
   recognitionColors [
-    1 0 0
+    0.6 1 0
   ]
 }
 Solid {
@@ -446,7 +446,7 @@ Solid {
     radius 0.04
   }
   recognitionColors [
-    1 0 0
+    0.9 0.5 0
   ]
 }
 Solid {
@@ -490,7 +490,7 @@ Solid {
     radius 0.04
   }
   recognitionColors [
-    1 0 0
+    0 0.2 0.9
   ]
 }
 Solid {
@@ -512,7 +512,7 @@ Solid {
     radius 0.04
   }
   recognitionColors [
-    1 0 0
+    1 0 1
   ]
 }
 Solid {
@@ -538,7 +538,7 @@ Solid {
   ]
 }
 Solid {
-  translation -2.96 -0.31 0.05
+  translation -2.95 -0.3 0.05
   children [
     Shape {
       appearance PBRAppearance {
@@ -556,6 +556,6 @@ Solid {
     radius 0.04
   }
   recognitionColors [
-    1 0 0
+    0 1 1
   ]
 }

@@ -41,7 +41,7 @@ rightMotor.setVelocity(0.0)
 # Camera Setup.
 
 camera = robot.getDevice("camera")
-camera.enable("camera")
+camera.enable(timestep)
 camera.recognitionEnable(timestep)
 
 # GPS Setup.
@@ -111,7 +111,7 @@ while robot.step(timestep) != -1:
         elif leftWallTooClose:
             #print("Left wall too close! Turning right.")   - Debug Code
             speedValues[0] = MAX_SPEED
-            speedValues[1] = MAX_SPEED / 4
+            speedValues[1] = MAX_SPEED / 2
             
         # If robot detects left wall, continue forward.    
         elif leftWall:
