@@ -3,15 +3,15 @@
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
-EXTERNPROTO "C:/Users/ashnr/Downloads/lab 6 solution/lab 6 solution/protos/E-puck.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puckGroundSensors.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/BrushedAluminium.proto"
+EXTERNPROTO "../protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puckGroundSensors.proto"
 
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.5700752234745723 0.5627898367747687 0.5985664868696258 2.0741695201149613
-  position -1.8720052599920307 -0.2427188748005869 5.568821390511926
+  orientation -0.5816275981423717 0.5572173937717084 0.5926365776404628 2.108838540387813
+  position -1.8176752765217499 -0.28405455927217405 5.551582260295487
 }
 TexturedBackground {
 }
@@ -20,6 +20,25 @@ TexturedBackgroundLight {
 RectangleArena {
   translation -1.9 0 0
   floorSize 2.5 2.5
+}
+DEF MAZE_SOLVER E-puck {
+  translation -3.08 -1.17 0
+  rotation 0 0 -1 -1.5708053071795867
+  name "maze_solver"
+  controller "maze_solver"
+  camera_recognition Recognition {
+  }
+  camera_fieldOfView 1.25
+  camera_width 500
+  camera_height 500
+  turretSlot [
+    GPS {
+    }
+  ]
+  groundSensorsSlot [
+    E-puckGroundSensors {
+    }
+  ]
 }
 Solid {
   translation -1.77499 -0.37511 0.0005
@@ -34,28 +53,6 @@ Solid {
     }
   ]
   name "goal"
-}
-DEF MAZE_SOLVER E-puck {
-  translation -3.08 -1.17 0
-  rotation 0 0 -1 -1.5708053071795867
-  name "maze_solver"
-  controller "maze_solver"
-  window "botstudio"
-  camera_recognition Recognition {
-  }
-  camera_fieldOfView 1.25
-  camera_width 500
-  camera_height 500
-  turretSlot [
-    InertialUnit {
-    }
-    GPS {
-    }
-  ]
-  groundSensorsSlot [
-    E-puckGroundSensors {
-    }
-  ]
 }
 Solid {
   translation -0.4 -0.86 0.05
